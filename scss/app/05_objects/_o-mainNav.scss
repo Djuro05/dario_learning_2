@@ -1,0 +1,182 @@
+// Main navigation
+// // HMTL structure use from Aurora travel website
+
+// Links padding
+$nav-item-padding: 1rem;
+
+// Nth last items for different drop orientation (change value in 'c-icon' partial also)
+$nth-last-child-item: 3;
+
+.o-mainNav {
+  display: none;
+
+  // All levels
+  &_list {
+    @include transition($time: 500ms);
+  }
+  &_list_item {}
+  &_list_item_a {
+    display: block;
+  }
+  &_list_item-drop {
+    position: relative;
+  }
+
+  // Root
+  & > &_list {}
+  & > &_list > &_list_item {}
+  & > &_list > &_list_item > &_list_item_a {}
+
+  // All levels except first
+  & > &_list &_list {}
+  & > &_list &_list_item &_list_item {}
+  & > &_list &_list_item &_list_item &_list_item_a {}
+
+  // #2 level
+  & > &_list > &_list_item > &_list {}
+  & > &_list > &_list_item > &_list > &_list_item {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
+
+  // #3 level and others
+  & > &_list > &_list_item > &_list &_list {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
+
+  @include laptopDown {
+    @include transition();
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active-mobile {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // All levels
+    &_list {}
+    &_list_item {}
+    &_list_item_a {
+      padding: $nav-item-padding;
+    }
+    &_list_item_trigger {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 45px;
+    }
+
+    // Root
+    & > &_list {}
+    & > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list_item_a {}
+
+    // All levels except first
+    & > &_list &_list {
+      max-height: 0;
+      visibility: hidden;
+      overflow: hidden;
+    }
+    & > &_list &_list_item &_list_item {}
+    & > &_list &_list_item &_list_item &_list_item_a {}
+
+    // #2 level
+    & > &_list > &_list_item > &_list {}
+    & > &_list > &_list_item > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {
+      padding-left: $nav-item-padding*2;
+    }
+
+    // #3 level and others
+    & > &_list > &_list_item > &_list &_list {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {
+      padding-left: $nav-item-padding*3;
+    }
+
+    // Specific levels
+    &_list_item.active-drop > &_list {
+      max-height: 1000px;
+      visibility: visible;
+    }
+
+  }
+
+  @include laptop {
+
+    // All levels
+    &_list {}
+    &_list_item {}
+    &_list_item_a {}
+    &_list_item-drop {}
+    &_list_item-drop > &_list_item_a {}
+    &_list_item_trigger {
+      display: none;
+    }
+
+    // Root
+    & > &_list {
+      display: flex;
+    }
+    & > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list_item_a {
+      padding: $nav-item-padding;
+    }
+
+    // All levels except first
+    & > &_list &_list {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
+    & > &_list &_list_item &_list_item {}
+    & > &_list &_list_item &_list_item &_list_item_a {
+      padding: $nav-item-padding/1.8 $nav-item-padding;
+      white-space: nowrap;
+    }
+    & > &_list &_list_item:hover > &_list {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // #2 level
+    & > &_list > &_list_item > &_list {
+      top: 100%;
+      left: 0;
+    }
+    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list {
+      right: 0;
+      left: auto;
+    }
+    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list > &_list_item > &_list_item_a {
+      text-align: right;
+    }
+    & > &_list > &_list_item > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
+    & > &_list > &_list_item &_list_item-drop > &_list_item_a {
+      padding-right: $nav-item-padding*1.5;
+    }
+    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list > &_list_item-drop > &_list_item_a {
+      padding-right: $nav-item-padding;
+      padding-left: $nav-item-padding*1.5;
+    }
+
+    // #3 level and others
+    & > &_list > &_list_item > &_list &_list {
+      top: 0;
+      left: 100%;
+    }
+    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list &_list {
+      right: 100%;
+      left: auto;
+    }
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
+
+  }
+
+}

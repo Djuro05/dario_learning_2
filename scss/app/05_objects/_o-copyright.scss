@@ -1,0 +1,25 @@
+// Footer copyright
+.o-copyright {
+
+  &_info,
+  &_logo {}
+
+  &_info {
+    margin-bottom: .6rem;
+  }
+
+  &_logo {}
+
+  &_img {
+    @include transition();
+    width: auto;
+    height: 1rem;
+    opacity: .65;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+}

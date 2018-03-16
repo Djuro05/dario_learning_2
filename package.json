@@ -1,0 +1,32 @@
+{
+  "name": "slice-setup",
+  "version": "1.1.0",
+  "description": "slice setup hibler",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "author": "Vedran Hibler",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/vedran-hibler/slice-setup.git"
+  },
+  "homepage": "https://bitbucket.org/vedran-hibler/slice-setup#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-download-stream": "0.0.13",
+    "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1"
+  }
+}

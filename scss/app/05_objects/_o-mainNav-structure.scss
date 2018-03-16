@@ -1,0 +1,133 @@
+// Main navigation
+// // HMTL structure use from Aurora travel website
+.o-mainNav {
+
+  // All levels
+  &_list {}
+  &_list_item {}
+  &_list_item_a {}
+
+  // Root
+  & > &_list {}
+  & > &_list > &_list_item {}
+  & > &_list > &_list_item > &_list_item_a {}
+
+  // All levels except first
+  & > &_list &_list {}
+  & > &_list &_list_item &_list_item {}
+  & > &_list &_list_item &_list_item &_list_item_a {}
+
+  // #2 level
+  & > &_list > &_list_item > &_list {}
+  & > &_list > &_list_item > &_list > &_list_item {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
+
+  // #3 level and others
+  & > &_list > &_list_item > &_list &_list {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
+
+  // Language switcher all levels
+  &_list-language &_list {}
+  &_list-language &_list_item {}
+  &_list-language &_list_item_a {}
+
+  // Language switcher root
+  &_list-language {}
+  &_list-language > &_list_item {}
+  &_list-language > &_list_item > &_list_item_a {}
+
+  // Language switcher #2 level
+  &_list-language > &_list_item > &_list {}
+  &_list-language > &_list_item > &_list &_list_item {}
+  &_list-language > &_list_item > &_list &_list_item_a {}
+
+  @include largeDown {
+
+    // All levels
+    &_list {}
+    &_list_item {}
+    &_list_item_a {}
+
+    // Root
+    & > &_list {}
+    & > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list_item_a {}
+
+    // All levels except first
+    & > &_list &_list {}
+    & > &_list &_list_item &_list_item {}
+    & > &_list &_list_item &_list_item &_list_item_a {}
+
+    // #2 level
+    & > &_list > &_list_item > &_list {}
+    & > &_list > &_list_item > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
+
+    // #3 level and others
+    & > &_list > &_list_item > &_list &_list {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
+
+    // Language switcher all levels
+    &_list-language &_list {}
+    &_list-language &_list_item {}
+    &_list-language &_list_item_a {}
+
+    // Language switcher root
+    &_list-language {}
+    &_list-language > &_list_item {}
+    &_list-language > &_list_item > &_list_item_a {}
+
+    // Language switcher #2 level
+    &_list-language > &_list_item > &_list {}
+    &_list-language > &_list_item > &_list &_list_item {}
+    &_list-language > &_list_item > &_list &_list_item_a {}
+
+  }
+
+  @include large {
+
+    // All levels
+    &_list {}
+    &_list_item {}
+    &_list_item_a {}
+
+    // Root
+    & > &_list {}
+    & > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list_item_a {}
+
+    // All levels except first
+    & > &_list &_list {}
+    & > &_list &_list_item &_list_item {}
+    & > &_list &_list_item &_list_item &_list_item_a {}
+
+    // #2 level
+    & > &_list > &_list_item > &_list {}
+    & > &_list > &_list_item > &_list > &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
+
+    // #3 level and others
+    & > &_list > &_list_item > &_list &_list {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
+    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
+
+    // Language switcher all levels
+    &_list-language &_list {}
+    &_list-language &_list_item {}
+    &_list-language &_list_item_a {}
+
+    // Language switcher root
+    &_list-language {}
+    &_list-language > &_list_item {}
+    &_list-language > &_list_item > &_list_item_a {}
+
+    // Language switcher #2 level
+    &_list-language > &_list_item > &_list {}
+    &_list-language > &_list_item > &_list &_list_item {}
+    &_list-language > &_list_item > &_list &_list_item_a {}
+
+  }
+
+}

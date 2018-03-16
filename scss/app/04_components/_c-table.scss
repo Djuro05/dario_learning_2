@@ -1,0 +1,18 @@
+// Include Bootstraps table component
+.table {
+
+  &,
+  table {
+    @extend %border-spacing-0;
+    border-collapse: collapse;
+  }
+
+}
+
+.table-responsive {
+
+  @include tabletPlusDown {
+    white-space: nowrap;
+  }
+
+}

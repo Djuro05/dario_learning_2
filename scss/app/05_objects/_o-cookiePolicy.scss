@@ -1,0 +1,43 @@
+// Cookie policy
+.o-cookie_policy {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 500px;
+  background: $white;
+  padding: 1.25rem;
+  z-index: 9999;
+
+  // TODO delete after sliceing
+  display: none;
+
+
+  @include tablet {
+    left: .625rem;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border: 5px solid $blue;
+    z-index: -1;
+  }
+
+  &_title {
+    margin: 0;
+    color: $blue;
+  }
+
+  &_body {
+    line-height: $line-height-default;
+    margin: .625rem 0 1.25rem;
+    font-size: .9rem;
+  }
+
+  &_button {}
+
+}

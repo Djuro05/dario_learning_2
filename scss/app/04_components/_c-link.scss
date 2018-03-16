@@ -1,0 +1,48 @@
+// Link
+.c-link {
+
+  &:hover {
+    @extend %decoration-underline;
+  }
+
+  //&-more {
+  //  position: relative;
+  //  padding-right: 1.2rem;
+  //
+  //  &:after {
+  //    @extend %no-repeat;
+  //    content:'';
+  //    position: absolute;
+  //    top: 2px;
+  //    right: 0;
+  //    bottom: 0;
+  //    width: 12px;
+  //    height: 11px;
+  //    margin: auto 0;
+  //    background-image: url('../media/app/arrows.svg');
+  //    background-size: 12px 11px;
+  //    background-position: center;
+  //  }
+  //
+  //}
+
+  &-underline {
+    @extend %decoration-underline;
+
+    &:hover {
+      @extend %decoration-none;
+    }
+
+  }
+
+}
+
+button {
+
+  &.c-link {
+
+    &:hover {}
+
+  }
+
+}

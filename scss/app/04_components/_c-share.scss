@@ -1,0 +1,25 @@
+.c-share {
+
+  &_list {}
+
+  &_list_item {
+    display: inline-block;
+
+    & + & {
+      margin-left: 1em;
+    }
+
+    &:hover img {
+      opacity: 1;
+      transform: scale(1.07);
+    }
+
+    img {
+      @include transition();
+      opacity: .75;
+      transform: scale(1);
+    }
+
+  }
+
+}

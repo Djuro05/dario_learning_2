@@ -1,0 +1,16 @@
+select, option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand{
+  display: none;
+}
+
+select {
+  font-family: $font-family-base;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: auto;
+}

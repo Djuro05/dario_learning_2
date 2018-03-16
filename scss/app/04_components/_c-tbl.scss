@@ -1,0 +1,41 @@
+// CSS table
+.c-tbl {
+  display: table;
+
+  &-even {
+
+    > .c-tbl_cell {
+      width: 50%;
+    }
+
+  }
+
+  // Vertical middle align
+  &-middle {
+
+    > .c-tbl_cell {
+      vertical-align: middle;
+    }
+
+  }
+
+  // Vertical top align
+  &-top {
+
+    > .c-tbl_cell {
+      vertical-align: top;
+    }
+
+  }
+
+  // Table layout fixed
+  &-fixed {
+    table-layout: fixed;
+  }
+
+  &_cell {
+    display: table-cell;
+  }
+
+  // Specific targets
+}

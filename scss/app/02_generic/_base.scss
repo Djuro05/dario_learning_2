@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  button,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: rgba(82, 82, 82, 0.1);
+  }
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  font-size: $body-font-size;
+  line-height: $line-height-default;
+  letter-spacing: $letter-spacing-default;
+  color: $color-text-neutral;
+}

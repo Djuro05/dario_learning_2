@@ -1,0 +1,57 @@
+/*
+  Helper classes for font styles
+*/
+
+.font-weight-thin {
+  // font-weight: $font-weight-thin;
+}
+
+.font-weight-light {
+  //font-weight: $font-weight-light;
+}
+
+.font-weight-regular {
+  //font-weight: $font-weight-regular;
+}
+
+.font-weight-medium {
+  //font-weight: $font-weight-medium;
+}
+
+.font-weight-semibold {
+  //font-weight: $font-weight-semiBold;
+}
+
+.font-weight-heavy {
+   //font-weight: $font-weight-heavy;
+}
+
+.font-weight-black {
+   //font-weight: $font-weight-black;
+}
+
+.font-body {
+  //font-family: $font-family-base;
+}
+
+.font-heading {
+  //font-family: $font-family-heading;
+}
+
+$font-sizes-list: 12, 13;
+
+@each $size in $font-sizes-list {
+
+  .f-#{$size} {
+    //@include font-size($size);
+  }
+
+}
+
+.lh1 {
+  //line-height: 1;
+}
+
+.lh1_5 {
+  //line-height: 1.5;
+}

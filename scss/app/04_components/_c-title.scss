@@ -1,0 +1,47 @@
+// Titles
+.c-ttl {
+
+  // Sizes of title
+  &-default {
+    //@include font-size(16);
+  }
+
+  &-s19 {
+    //@include font-size(19);
+  }
+
+  &-sm {}
+  &-smp {}
+  &-md {}
+  &-mdp {}
+  &-lg {}
+  &-lgp {}
+  &-xl {}
+  &-xxl {}
+
+  @include tablet {
+    &-default {}
+    &-sm {}
+    &-smp {}
+    &-md {}
+    &-mdp {}
+    &-lg {}
+    &-lgp {}
+    &-xl {}
+    &-xxl {}
+  }
+
+  @include laptop {
+    &-default {}
+    &-sm {}
+    &-smp {}
+    &-md {}
+    &-mdp {}
+    &-lg {}
+    &-lgp {}
+    &-xl {}
+    &-xxl {}
+  }
+
+  // Specific targets
+}

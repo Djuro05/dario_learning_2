@@ -1,0 +1,105 @@
+// Buttons
+
+// Global settings
+$btn-padding-y: .7rem;
+$btn-padding-x: 1rem;
+$btn-border-radius: 2px;
+$btn-font-size: 1rem;
+$btn-font-weight: $font-weight-bold;
+
+// Primary button settings
+$btn-primary-bg: $brand-primary;
+$btn-primary-bg-hover: darken($btn-primary-bg, 10%);
+
+$btn-primary-color: $white;
+$btn-primary-color-hover: darken($btn-primary-color, 10%);
+
+$btn-primary-border-width: 0;
+$btn-primary-border-width-hover: $btn-primary-border-width;
+$btn-primary-border-style: solid;
+$btn-primary-border-style-hover: $btn-primary-border-style;
+$btn-primary-border-color: $white;
+$btn-primary-border-color-hover: darken($btn-primary-border-color, 10%);
+
+
+// Secondary button settings
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-bg-hover: darken($btn-secondary-bg, 10%);
+
+$btn-secondary-color: $white;
+$btn-secondary-color-hover: darken($btn-secondary-color, 10%);
+
+$btn-secondary-border-width: 0;
+$btn-secondary-border-width-hover: $btn-secondary-border-width;
+$btn-secondary-border-style: solid;
+$btn-secondary-border-style-hover: $btn-secondary-border-style;
+$btn-secondary-border-color: $white;
+$btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
+
+.c-btn {
+  @include transition();
+  display: inline-flex;
+  justify-content: center;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  &, &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  @include print {
+    display: none;
+  }
+
+  @include mobilePlusDown {
+    display: flex;
+    width: 100%;
+  }
+
+  &-primary {
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+    border-width: $btn-primary-border-width;
+    border-style: $btn-primary-border-style;
+    border-color: $btn-primary-border-color;
+
+    &:hover {
+      background-color: $btn-primary-bg-hover;
+      color: $btn-primary-color-hover;
+      border-color: $btn-primary-border-color-hover;
+    }
+
+  }
+
+  &-secondary {
+    background-color: $btn-secondary-bg;
+    color: $btn-secondary-color;
+    border-width: $btn-secondary-border-width;
+    border-style: $btn-secondary-border-style;
+    border-color: $btn-secondary-border-color;
+
+    &:hover {
+      background-color: $btn-secondary-bg-hover;
+      color: $btn-secondary-color-hover;
+      border-color: $btn-secondary-border-color-hover;
+    }
+
+  }
+
+  @include mobilePlus {
+
+    // Size modifiers (note: use along with 'w-100')
+    &-mw250 {
+      max-width: 250px;
+    }
+
+  }
+
+}
