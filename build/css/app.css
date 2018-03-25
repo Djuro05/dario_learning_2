@@ -2833,7 +2833,7 @@ html {
 
 html, body {
   height: 100%;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 100%;
   line-height: 1.2;
@@ -2847,7 +2847,7 @@ a {
   color: inherit; }
 
 button {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: "Montserrat", sans-serif; }
 
 fieldset {
   padding: 0;
@@ -2855,7 +2855,7 @@ fieldset {
   margin: 0; }
 
 input {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: "Montserrat", sans-serif; }
 
 select, option {
   -webkit-appearance: none;
@@ -2865,7 +2865,7 @@ select::-ms-expand {
   display: none; }
 
 select {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: "Montserrat", sans-serif; }
 
 select.form-control:not([size]):not([multiple]) {
   height: auto; }
@@ -2880,7 +2880,7 @@ table {
     border: 1px solid black; }
 
 textarea {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
   resize: vertical; }
 
 ul {
@@ -2939,6 +2939,18 @@ ul {
   @media only screen and (min-width: 468px) {
     .c-btn-mw250 {
       max-width: 250px; } }
+
+.c-img {
+  display: block;
+  width: 100%; }
+  .c-img.medium {
+    width: 300px; }
+
+.c-ttl {
+  margin: 0; }
+  .c-ttl-h1 {
+    font-size: 45px;
+    font-weight: 700; }
 
 /*------------------------------------------------------------------------------------
   05_objects

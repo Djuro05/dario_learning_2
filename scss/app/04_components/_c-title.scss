@@ -1,5 +1,6 @@
 // Titles
 .c-ttl {
+  margin: 0;
 
   // Sizes of title
   &-default {
@@ -10,37 +11,9 @@
     //@include font-size(19);
   }
 
-  &-sm {}
-  &-smp {}
-  &-md {}
-  &-mdp {}
-  &-lg {}
-  &-lgp {}
-  &-xl {}
-  &-xxl {}
-
-  @include tablet {
-    &-default {}
-    &-sm {}
-    &-smp {}
-    &-md {}
-    &-mdp {}
-    &-lg {}
-    &-lgp {}
-    &-xl {}
-    &-xxl {}
-  }
-
-  @include laptop {
-    &-default {}
-    &-sm {}
-    &-smp {}
-    &-md {}
-    &-mdp {}
-    &-lg {}
-    &-lgp {}
-    &-xl {}
-    &-xxl {}
+  &-h1 {
+    font-size: 45px;
+    font-weight: $font-weight-bold;
   }
 
   // Specific targets
