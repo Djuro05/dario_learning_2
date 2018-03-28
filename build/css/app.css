@@ -2940,6 +2940,32 @@ ul {
     .c-btn-mw250 {
       max-width: 250px; } }
 
+.c-icon .iconic {
+  height: 0;
+  opacity: 0; }
+  .c-icon .iconic.injected-svg {
+    height: auto;
+    opacity: 1; }
+
+.c-icon * {
+  width: 1em; }
+
+.c-icon.c-icon-21 * {
+  width: 21px;
+  height: 21px; }
+
+.c-icon.c-icon-48-44 * {
+  width: 48px;
+  height: 44px; }
+
+.c-icon-white .iconic * {
+  fill: #ffffff;
+  stroke: #ffffff; }
+
+.c-icon-black .iconic * {
+  fill: #000000;
+  stroke: #000000; }
+
 .c-img {
   display: block;
   width: 100%; }
@@ -2955,6 +2981,50 @@ ul {
 /*------------------------------------------------------------------------------------
   05_objects
 ------------------------------------------------------------------------------------*/
+.o-unitCard_wrapper {
+  display: inline-block;
+  box-shadow: none;
+  transition: box-shadow 0.35s ease-in-out;
+  margin: 5px 5px 5px 5px; }
+
+.o-unitCard_wrapper:hover {
+  box-shadow: 2px 2px 2px 2px grey; }
+
+.o-unitCard_img img {
+  display: block;
+  width: 100%; }
+
+.o-unitCard_img:hover {
+  display: block;
+  width: 100%; }
+
+.o-unitCard_info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cdcdb1; }
+
+.o-unitCard_name {
+  color: #3d3d29;
+  font-size: 13px;
+  font-weight: bold; }
+
+.o-unitCard_c-icon {
+  padding-top: 5px; }
+
+.o-unitCard_iconic2 {
+  color: #3d3d29;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.o-unitCard_iconic3 {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #cdcdb1;
+  padding-top: 5px; }
+
 /*------------------------------------------------------------------------------------
   06_pages
 ------------------------------------------------------------------------------------*/

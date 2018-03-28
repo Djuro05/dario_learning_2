@@ -1,0 +1,56 @@
+.o-unitCard {
+  &_wrapper{
+    display: inline-block;
+    box-shadow: none;
+    transition: box-shadow 0.35s ease-in-out;
+    margin: 5px 5px 5px 5px;
+  }
+
+  &_wrapper:hover{
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+
+  &_img img {
+    display: block;
+    width: 100%;
+  }
+
+  &_img:hover{
+    display: block;
+    width: 100%;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cdcdb1;
+  }
+
+  &_name {
+    color: #3d3d29;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &_c-icon {
+    padding-top: 5px;
+  }
+
+ &_iconic2 {
+  color: #3d3d29;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ &_iconic3 {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #cdcdb1;
+  padding-top: 5px;
+}
+
+}

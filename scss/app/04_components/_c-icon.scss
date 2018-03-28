@@ -39,4 +39,9 @@
     stroke: $white;
   }
 
+  .c-icon-black & {
+    fill: $black;
+    stroke: $black;
+  }
+
 }

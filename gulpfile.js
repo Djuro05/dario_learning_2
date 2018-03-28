@@ -92,7 +92,7 @@ gulp.task('png', function() {
 gulp.task('svg', function () {
   gulp.src('media/**/*.svg')
     .pipe(svgmin())
-    .pipe(gulp.dest('build/media/icons'));
+    .pipe(gulp.dest('build/media'));
 });
 
 
@@ -106,5 +106,5 @@ gulp.task('watch', function () {
 //-----------------------------------------------------------------------------
 
 //-------------------Pokretanje Gulp.js funkcija---------------------------------
-gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'html', 'js', 'svg', 'browser-sync','png', 'watch']);
 //-----------------------------------------------------------------------------
