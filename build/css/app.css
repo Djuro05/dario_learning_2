@@ -2940,6 +2940,32 @@ ul {
     .c-btn-mw250 {
       max-width: 250px; } }
 
+.c-icon .iconic {
+  height: 0;
+  opacity: 0; }
+  .c-icon .iconic.injected-svg {
+    height: auto;
+    opacity: 1; }
+
+.c-icon * {
+  width: 1em; }
+
+.c-icon.c-icon-21 * {
+  width: 21px;
+  height: 21px; }
+
+.c-icon.c-icon-48-44 * {
+  width: 48px;
+  height: 44px; }
+
+.c-icon-white .iconic * {
+  fill: #ffffff;
+  stroke: #ffffff; }
+
+.c-icon-black .iconic * {
+  fill: #000000;
+  stroke: #000000; }
+
 .c-img {
   display: block;
   width: 100%; }
@@ -2955,6 +2981,42 @@ ul {
 /*------------------------------------------------------------------------------------
   05_objects
 ------------------------------------------------------------------------------------*/
+.o-unitCard_wrapper {
+  display: block;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 5px;
+  box-shadow: none;
+  transition: box-shadow .35s ease-in-out; }
+
+.o-unitCard_wrapper:hover {
+  box-shadow: 0 0 2px 2px #b3b3b3; }
+
+.o-unitCard_img {
+  display: block;
+  width: 100%; }
+
+.o-unitCard_info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px; }
+
+.o-unitCard_name {
+  color: #000000;
+  font-size: .81rem;
+  font-weight: 600; }
+
+.o-unitCard_details {
+  color: #000000;
+  font-size: .75rem;
+  font-weight: 800; }
+
+.o-unitCard_amenitiesList {
+  padding-top: 3px;
+  border-top: 1px solid gainsboro; }
+
 /*------------------------------------------------------------------------------------
   06_pages
 ------------------------------------------------------------------------------------*/
