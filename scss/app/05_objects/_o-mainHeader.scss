@@ -1,2 +1,18 @@
-// Main Header
-.o-mainHeader {}
+.o-mainHeader {
+  &_top {
+    display: block;
+    color: white;
+    background-color: $blue;
+  }
+
+  &_bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .col {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+}

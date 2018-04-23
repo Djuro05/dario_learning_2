@@ -1,6 +1,6 @@
 // Logo
 .o-logo {
-  display: none;
+
 
   &_img {}
 
@@ -15,5 +15,21 @@
     &_img {}
 
   }
+
+  .o-mainHeader .o-mainHeader_bot & {
+    display: block;
+    height: auto;
+    width: 69px;
+
+  }
+
+  .o-contactList .o-contactList_item & {
+    height: 12px;
+  }
+
+  .o-dropsList .o-dropsList_item .o-dropsList_item_a & {
+    height: 12px;
+  }
+
 
 }

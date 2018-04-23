@@ -8,9 +8,173 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+
+<!--Navigation-->
+
+    <header class="o-mainHeader">
+      <div class="o-mainHeader_top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col text-right">
+              <ul class="o-contactList d-inline-block">
+                <li class="o-contactList_item d-inline-block">
+                  <img class="o-logo" src="/media/app/telephone.svg" alt="telephone">
+                  <a href="tel:051123456" class="c-link d-inline-block">051123456</a>
+                </li>
+                <li class="o-contactList_item d-inline-block">
+                  <img class="o-logo" src="/media/app/mail.svg" alt="mail">
+                  <a href="mailto:hexistest@gmail.com" class="c-link d-inline-block">hexistest@gmail.com</a>
+                </li>
+              </ul>
+
+            <div class="o-dropsList_wrapper d-inline-block" data-only-one-open-wrapper>
+              <ul class="o-dropsList">
+                <li class="o-dropsList_item d-inline-block">
+                  <input id= "langSwitch" class="o-toggle_trigger" type="checkbox" autocomplete="off">
+                  <a class="o-dropsList_item_a" href"#">
+                    <img class="o-logo" src="/media/app/language.svg" alt="language">
+                    English
+                    <label class="o-toggle_trigger" for="langSwitch"></label>
+                  </a>
+
+                <ul class="o-dropsList">
+                  <li class="o-dropsList_item ">
+                    <a class="o-dropsList_item_a" href="https://goldfish.dev.hexis.hr/estee/hr/">Hrvatski</a>
+                  </li>
+                  <li class="o-dropsList_item">
+                    <a class="o-dropsList_item_a" href="https://goldfish.dev.hexis.hr/estee/de/">German</a>
+                  </li>
+                  <li class="o-dropsList_item">
+                    <a class="o-dropsList_item_a" href="https://goldfish.dev.hexis.hr/estee/it/">Italiano</a>
+                  </li>
+                  <li class="o-dropsList_item">
+                    <a class="o-dropsList_item_a" href="https://goldfish.dev.hexis.hr/estee/si/">Slovenian</a>
+                  </li>
+                </ul>
+                </li>
+                <li class="o-dropsList_item d-inline-block" data-cookie-user data-currency-switcher data-switchclose>
+                  <input id="currencySwitch" class="o-toggle_trigger" type="checkbox" autocomplete="off" data-only-one-open>
+                  <a class="o-dropsList_item_a" href="#">
+                    <img class="o-logo" src="/media/app/convert.svg" alt="convert">
+                    <span id="currency-title">HRK Kn</span>
+                    <label class="o-toggle_label" for="currencySwitch"></label>
+                  </a>
+                  <ul id="currency-switcher" class="o-dropsList" data-currency-switcher-ul data-value="eur">
+                    <li class="o-dropsList_item" data-key="eur" data-title="Euro €">
+                      <a class="o-dropsList_item_a">Euro €</a>
+                    </li>
+                    <li class="o-dropsList_item active" data-key="hrk" data-title="HRK kn">
+                      <a class="o-dropsList_item_a">HRK Kn</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+           </div>
+         </div>
+        </div>
+      </div>
+
+    <div class="bg-main bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="o-mainHeader_bot">
+              <a href="https://goldfish.dev.hexis.hr/estee/en/">
+                <img class="o-logo" src="/media/app/logo.png" alt="Estee">
+              </a>
+              <nav class="o-mainNav text-lg-right">
+                <h1 class="sr-only">Main navigation</h1>
+                <ul class="o-mainNav_list">
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/sobce">
+                      Sobe
+                    </a>
+                  </li>
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/mvc/en/page/list/type/cruise">
+                      Cruises
+                    </a>
+                  </li>
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/app">
+                      Apartmani
+                    </a>
+                  </li>
+                  <li class="o-mainNav_list_item o-mainNav_list_item-drop">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/search?type=apartment">
+                      Apartments
+                    </a>
+                    <div class="o-mainNav_list_item_trigger" style="height: 64px;"></div>
+                    <ul class="o-mainNav_list">
+                      <li class="o-mainNav_list_item">
+                        <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/accommodationunit/the-animals">
+                          The animals
+                        </a>
+                      </li>
+                      <li class="o-mainNav_list_item">
+                        <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/accommodationunit/bob-dylan">
+                          Bob Dylan
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/mvc/en/event/list">
+                      Events
+                    </a>
+                  </li>
+                  <li class="o-mainNav_list_item o-mainNav_list_item-drop">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/mvc/en/news/list">
+                      News
+                    </a>
+                    <div class="o-mainNav_list_item_trigger" style="height: 64px;"></div>
+                    <ul class="o-mainNav_list">
+                      <li class="o-mainNav_list_item">
+                        <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/contact">
+                          test
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/mvc/en/location/list">
+                      Locations
+                    </a>
+                  </li>
+                  <li class="o-mainNav_list_item">
+                    <a class="o-mainNav_list_item_a" href="https://goldfish.dev.hexis.hr/estee/en/contact">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            <!-- <ul class="o-mobileMenu text-right hidden-lg-up">
+              <li class="o-mobileMenu_item d-inline-block" data-mobile-menu-trigger="search">
+                <div class="c-mobileSearchAnimation relative overflowHidden">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li class="o-mobileMenu_item d-inline-block" data-mobile-menu-trigger="navigation">
+                <div class="c-mobileNavigationAnimation relative">
+                  <span></span>
+                </div>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
 <!--CARD-->
 
-
+<!--
     <a class="o-unitCard_wrapper" href="#">
       <img class="o-unitCard_img" src="http://via.placeholder.com/300x200" alt="Slika1">
 
@@ -53,7 +217,7 @@
               <img src="/media/app/parking.svg" alt="parking">
           </div>
       </div>
-    </a>
+    </a> -->
 
 <!--CONTAINER-->
 

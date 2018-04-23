@@ -1,182 +1,120 @@
-// Main navigation
-// // HMTL structure use from Aurora travel website
-
-// Links padding
-$nav-item-padding: 1rem;
-
-// Nth last items for different drop orientation (change value in 'c-icon' partial also)
-$nth-last-child-item: 3;
-
 .o-mainNav {
-  display: none;
-
-  // All levels
   &_list {
-    @include transition($time: 500ms);
+    z-index: 12;
+    display: flex;
+    justify-content: flex-end;
   }
-  &_list_item {}
+
+  &_list_item {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  &_list_item &_list_item {
+    margin: 0px;
+  }
+
+
   &_list_item_a {
     display: block;
+    line-height: 4rem;
+    color: darken(desaturate($blue, 1.30), 12.94);
+    font-family: "Open Sans", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-right: 1rem;
   }
+
+
   &_list_item-drop {
     position: relative;
   }
 
-  // Root
-  & > &_list {}
-  & > &_list > &_list_item {}
-  & > &_list > &_list_item > &_list_item_a {}
-
-  // All levels except first
-  & > &_list &_list {}
-  & > &_list &_list_item &_list_item {}
-  & > &_list &_list_item &_list_item &_list_item_a {}
-
-  // #2 level
-  & > &_list > &_list_item > &_list {}
-  & > &_list > &_list_item > &_list > &_list_item {}
-  & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
-
-  // #3 level and others
-  & > &_list > &_list_item > &_list &_list {}
-  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
-  & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
-
-  @include laptopDown {
-    @include transition();
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-
-    &.active-mobile {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    // All levels
-    &_list {}
-    &_list_item {}
-    &_list_item_a {
-      padding: $nav-item-padding;
-    }
-    &_list_item_trigger {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 20%;
-      height: 45px;
-    }
-
-    // Root
-    & > &_list {}
-    & > &_list > &_list_item {}
-    & > &_list > &_list_item > &_list_item_a {}
-
-    // All levels except first
-    & > &_list &_list {
-      max-height: 0;
-      visibility: hidden;
-      overflow: hidden;
-    }
-    & > &_list &_list_item &_list_item {}
-    & > &_list &_list_item &_list_item &_list_item_a {}
-
-    // #2 level
-    & > &_list > &_list_item > &_list {}
-    & > &_list > &_list_item > &_list > &_list_item {}
-    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {
-      padding-left: $nav-item-padding*2;
-    }
-
-    // #3 level and others
-    & > &_list > &_list_item > &_list &_list {}
-    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
-    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {
-      padding-left: $nav-item-padding*3;
-    }
-
-    // Specific levels
-    &_list_item.active-drop > &_list {
-      max-height: 1000px;
-      visibility: visible;
-    }
-
+  &_list_item_trigger {
+    display: none;
   }
 
-  @include laptop {
+  &_list &_list {
+    top: 100%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 200px;
+    text-align: left;
+  }
 
-    // All levels
-    &_list {}
-    &_list_item {}
-    &_list_item_a {}
-    &_list_item-drop {}
-    &_list_item-drop > &_list_item_a {}
-    &_list_item_trigger {
-      display: none;
-    }
 
-    // Root
-    & > &_list {
-      display: flex;
-    }
-    & > &_list > &_list_item {}
-    & > &_list > &_list_item > &_list_item_a {
-      padding: $nav-item-padding;
-    }
+  &_list &_list_item_a {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    background-color: $white;
+  }
 
-    // All levels except first
-    & > &_list &_list {
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-    }
-    & > &_list &_list_item &_list_item {}
-    & > &_list &_list_item &_list_item &_list_item_a {
-      padding: $nav-item-padding/1.8 $nav-item-padding;
-      white-space: nowrap;
-    }
-    & > &_list &_list_item:hover > &_list {
-      opacity: 1;
-      visibility: visible;
-    }
+  &_list &_list_item_a:before {
+    transition: 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $blue;
+  }
 
-    // #2 level
-    & > &_list > &_list_item > &_list {
-      top: 100%;
-      left: 0;
-    }
-    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list {
-      right: 0;
-      left: auto;
-    }
-    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list > &_list_item > &_list_item_a {
-      text-align: right;
-    }
-    & > &_list > &_list_item > &_list > &_list_item {}
-    & > &_list > &_list_item > &_list > &_list_item > &_list_item_a {}
-    & > &_list > &_list_item &_list_item-drop > &_list_item_a {
-      padding-right: $nav-item-padding*1.5;
-    }
-    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list > &_list_item-drop > &_list_item_a {
-      padding-right: $nav-item-padding;
-      padding-left: $nav-item-padding*1.5;
-    }
+  &_list &_list_item_a:hover:before {
+    width: 100%;
+  }
 
-    // #3 level and others
-    & > &_list > &_list_item > &_list &_list {
-      top: 0;
-      left: 100%;
-    }
-    & > &_list > &_list_item:nth-last-child(-n+#{$nth-last-child-item}) > &_list &_list {
-      right: 100%;
-      left: auto;
-    }
-    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item {}
-    & > &_list > &_list_item > &_list > &_list_item > &_list &_list_item_a {}
 
+  &_list_item-drop:after {
+    transition: all 0.3s ease-in-out;
+    content: '>';
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    bottom: 0;
+    height: 1rem;
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    transform: scale(1.2, 0.7) rotate(90deg);
+  }
+
+  &_list_item-drop >&_list {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+
+  &_list_item-drop:hover >&_list{
+    visibility: visible;
+    opacity: 0.8;
+  }
+
+
+  &_list &_list_item &_list_item &_list_item_a {
+    background-color: $white;
+    color: $black;
+    padding: .5rem .5rem .5rem 1rem;
+    width: 200px;
+    line-height: normal;
+  }
+
+  &_list &_list_item &_list_item &_list_item_a:before {
+    content: none;
+  }
+
+  &_list &_list_item &_list_item &_list_item_a:hover {
+    top: 0;
+    background-color: $blue;
+    color: $white;
+    width: 200px;
   }
 
 }

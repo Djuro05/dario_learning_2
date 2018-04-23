@@ -1,0 +1,64 @@
+.o-dropsList {
+  &_item {
+    position: relative;
+    display: block;
+  }
+
+  &_item_a {
+    display: block;
+    position: relative;
+    padding: 5px 0;
+  }
+
+  & > &_item > & {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 160px;
+    border: 1px solid $blue;
+  }
+
+  & > &_item:hover > & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  & > &_item > & > &_item {
+    position: relative;
+    font-size: 1rem;
+    z-index: 13;
+  }
+
+  & > &_item > & > &_item > &_item_a {
+    display: block;
+    padding: 12px 6px 9px 4px;
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+  }
+
+  & > &_item > & > &_item > &_item_a:hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &_item + &_item {
+    margin-left: 1.2rem;
+  }
+
+  .o-toggle_trigger {
+    display: none;
+    position: relative;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .o-toggle_label {
+    display: none;
+  }
+}
